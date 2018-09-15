@@ -1,0 +1,17 @@
+public class test{
+   public static void main(String[] args){
+    String[] str = new String[] {"1","2","3","4","5"};
+    System.out.println(str[-1]);
+ }
+}
+
+运行结果：Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: -1  at test.main(test.java:4)
+
+public class test{
+   public static void main(String[] args){
+    String[] str = new String[] {"1","2","3","4","5"};
+    System.out.println(str[5]);
+ }
+}
+
+运行结果：Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 5   at test.main(test.java:4)

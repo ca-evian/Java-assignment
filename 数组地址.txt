@@ -1,0 +1,28 @@
+public class test{
+   public static void main(String[] args){
+   String a = "one";
+   String b = a;
+   System.out.println("a address is: "+System.identityHashCode(a));
+   System.out.println("b address is: "+System.identityHashCode(b)+"\n");
+   
+   b = "two";
+   System.out.println("a address is: "+System.identityHashCode(a));
+   System.out.println("b address is: "+System.identityHashCode(b));
+   String c = "two";
+   System.out.println("c address is: "+System.identityHashCode(c));
+   String d = new String("two");
+   System.out.println("d address is: "+System.identityHashCode(d));
+ }
+}
+
+输出结果为：
+a address is: 607635164
+b address is: 607635164
+
+a address is: 607635164
+b address is: 1205044462
+c address is: 1205044462
+d address is: 761960786
+
+可见一开始a=b后a，b地址相同。改变b的值，b的地址改变而a的不变。新建对象c并直接赋予与b相同的值，
+则c与b的地址相同。新建对象d并用new方法赋予与b和c相同的值，则d的地址与b和c均不相同。
